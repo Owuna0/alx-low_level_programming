@@ -1,19 +1,23 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "main.h"
 
-char *string_toupper(char *str) {
-    int i = 0;
-    while (str[i] != '\0') {
-        str[i] = toupper(str[i]);
-        i++;
-    }
-    return str;
-}
+/**
+ * string_toupper - change lowercase to uppercase
+ * @s:string
+ * Return:char
+ */
 
-int main() {
-    char str[] = "Hello, world!";
-    printf("Original string: %s\n", str);
-    string_toupper(str);
-    printf("Modified string: %s\n", str);
-    return 0;
+
+char *string_toupper(char *s)
+{
+
+	int i;
+
+	i = 0;
+	while (*(s + i))
+	{
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+			*(s + i) -= 'a' - 'A';
+		i++;
+	}
+	return (s);
 }

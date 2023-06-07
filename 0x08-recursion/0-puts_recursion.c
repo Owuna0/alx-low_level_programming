@@ -2,7 +2,7 @@
 /**
  * _puts_recursion - function luke puts();
  * @s: input
- * Return: Always 0 (Success)
+ * Return: 0
  */
 void _puts_recursion(char *s);
 {
